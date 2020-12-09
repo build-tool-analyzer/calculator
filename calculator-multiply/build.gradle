@@ -1,0 +1,12 @@
+dependencies {
+    implementation project(':calculator-add')
+    implementation project(':calculator-subtract')
+}
+
+jar {
+  manifest {
+    attributes(
+      "Class-Path": configurations.compile.collect { it.getName() }.join(' '),
+      'Main-Class': 'org.build_tool_analyzer.Multiply')
+  }
+}
