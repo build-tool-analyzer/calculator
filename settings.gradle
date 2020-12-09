@@ -3,5 +3,4 @@
  */
 
 rootProject.name = 'Calculator'
-
-include 'calculator-add', 'calculator-app', 'calculator-divide', 'calculator-multiply', 'calculator-subtract'    
+include 'calculator-add', 'calculator-app', 'calculator-divide', 'calculator-multiply', 'calculator-subtract'

@@ -1,0 +1,25 @@
+plugins {
+    id 'com.github.johnrengelman.shadow' version '6.1.0'
+}
+
+mainClassName = 'org.build_tool_analyzer.Calculator'
+
+application {
+    mainClass = 'org.build_tool_analyzer.Calculator'
+}
+
+dependencies {
+    implementation project(':calculator-add')
+    implementation project(':calculator-subtract')
+    implementation project(':calculator-multiply')
+    implementation project(':calculator-divide')
+}
+
+jar {
+    manifest {
+        attributes(
+                'Main-Class': 'org.build_tool_analyzer.Calculator',
+        )
+    }
+    from configurations.runtime.collect { zipTree(it) }
+}
