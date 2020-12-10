@@ -20,7 +20,6 @@
     </licenses>
 
     <dependencies>
-
         <dependency>
             <groupId>org.build_tool_analyzer</groupId>
             <artifactId>Add</artifactId>
